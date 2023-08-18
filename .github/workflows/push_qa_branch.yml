@@ -56,7 +56,7 @@ jobs:
               ##run: sf project deploy start -d force-app --test-level NoTestRun --json
 
               ## To check whether a deployment would succeed (to prepare for Quick Deploy):
-              run: sfdx force:source:deploy -d force-app -l NoTestRun -c
+              run: sfdx force:source:deploy -p force-app -l NoTestRun -c
 
             - name: 'Deploy destructive changes (if any) to Integration org'
               run: sfdx force:mdapi:deploy -d "changed-sources/destructiveChanges" --checkonly --ignorewarnings     
